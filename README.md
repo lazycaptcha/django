@@ -31,8 +31,8 @@ LAZYCAPTCHA = {
     "BASE_URL": "https://lazycaptcha.com",  # or your self-hosted instance
     # Optional:
     "TIMEOUT": 5,
-    "TYPE": "auto",        # auto | image_puzzle | pow | behavioral | text_math
-    "THEME": "light",      # light | dark
+    "TYPE": "auto",        # auto | image_puzzle | pow | behavioral | text_math | press_hold | rotate_align
+    "THEME": "light",      # light | dark | auto
 }
 ```
 
