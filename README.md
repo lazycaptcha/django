@@ -33,6 +33,8 @@ LAZYCAPTCHA = {
     "TIMEOUT": 5,
     "TYPE": "auto",        # auto | image_puzzle | pow | behavioral | text_math | press_hold | rotate_align
     "THEME": "light",      # light | dark | auto
+    "WIDGET": "standard",  # standard | compact | newsletter | login
+    "WIDTH": "420px",      # optional, capped at 500px by the hosted widget
 }
 ```
 
@@ -95,6 +97,13 @@ Override type/theme per-render:
 
 ```django
 {% lazycaptcha type="image_puzzle" theme="dark" %}
+```
+
+Or switch presets / width per-render:
+
+```django
+{% lazycaptcha widget="newsletter" %}
+{% lazycaptcha widget="standard" width="420px" %}
 ```
 
 ### 3. View decorator
@@ -177,6 +186,8 @@ with patch("lazycaptcha.client.LazyCaptchaClient.check", return_value=True):
 | `TIMEOUT` | `5` | HTTP timeout in seconds |
 | `TYPE` | `auto` | Default challenge type |
 | `THEME` | `light` | Widget theme |
+| `WIDGET` | `standard` | Widget preset. `newsletter` stays intentionally skinny |
+| `WIDTH` | `""` | Optional width override, capped at `500px` |
 | `TOKEN_FIELD` | `lazycaptcha-token` | Form field name |
 | `SEND_REMOTE_IP` | `True` | Forward client IP on verify |
 | `PROTECTED_PATHS` | `[]` | Middleware URL prefixes |

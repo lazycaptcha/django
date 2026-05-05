@@ -10,6 +10,8 @@ Settings live under the ``LAZYCAPTCHA`` dict in Django settings:
         "TIMEOUT": 5,
         "TYPE": "auto",
         "THEME": "light",
+        "WIDGET": "standard",
+        "WIDTH": "",
         "TOKEN_FIELD": "lazycaptcha-token",
         "SEND_REMOTE_IP": True,
     }
@@ -27,6 +29,8 @@ DEFAULTS = {
     "TIMEOUT": 5,
     "TYPE": "auto",
     "THEME": "light",
+    "WIDGET": "standard",
+    "WIDTH": "",
     "TOKEN_FIELD": "lazycaptcha-token",
     "SEND_REMOTE_IP": True,
 }
